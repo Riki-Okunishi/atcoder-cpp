@@ -21,6 +21,22 @@ struct ProconInit {
 } PROCON_INIT;
 
 signed main() {
-  cout << "Hello, world!" << endl;
+  int N, D, H;
+  cin >> N >> D >> H;
+  double max = 0.0;
+  for (int i = 0; i < N; i++){
+    int d_i, h_i;
+    cin >> d_i;
+    cin >> h_i;
+    double b = H - (double)(H - h_i) / (double)(D - d_i) * D;
+    if (b < 0.0) {
+      b = 0.0;
+    }
+    if (b > max) {
+      max = b;
+    }
+  }
+  cout << max;
+
   return 0;
 }
