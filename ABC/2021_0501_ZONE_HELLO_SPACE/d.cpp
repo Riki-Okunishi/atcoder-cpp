@@ -21,15 +21,16 @@ struct ProconInit {
 } PROCON_INIT;
 
 signed main() {
-  list<char> l;
+  list<char> l; // stringで直接管理できないだろうか？
 
-  string T="";
+  string T = "";
   string S;
   cin >> S;
   bool push_back = true;
+  // 連続文字列を除去しながらでも結果は変わらない
   for (int i = 0; i < (int)S.length(); i++){
     if(S[i] == 'R'){
-      push_back = !push_back;
+      push_back = !push_back; // pushする向きを入れ替える
     }else{
       if(push_back){
         if(l.back() == S[i]){

@@ -25,13 +25,12 @@ signed main() {
   cin >> str;
   int count = 0;
   for (int i = 0; i < 12; i++) {
-    if(str[i]=='Z'){
-      if(str[i+1]=='O' && str[i+2]=='N' && str[i+3]=='e'){
+    if (str[i] == 'Z') {
+      if (str[i + 1] == 'O' && str[i + 2] == 'N' && str[i + 3] == 'e') { //'Z'の後ろ3文字が 'O', 'N', 'e'になっているか調べる
         count++;
-        i += 3;
+        i += 3; // 続きは"ZONe"の後ろからでよい
       }
     }
   }
-  cout << count;
   return 0;
 }
