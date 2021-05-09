@@ -37,7 +37,7 @@ ll combination2(ll n) {
 signed main() {
   int N;
   ll A_i;
-  map<int, ll> As; // 数列の値を200で割った余りと，同じ余りになる個数を紐付けるMap
+  unordered_map<int, ll> As; // 数列の値を200で割った余りと，同じ余りになる個数を紐付けるMap
 
   cin >> N;
   for (int i = 0; i < N; i++) {
