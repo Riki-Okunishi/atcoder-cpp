@@ -25,3 +25,12 @@ signed main() {
   cout << ( C * D > B ? static_cast<int>(ceil(A / ( C * D - B))) : -1 ); // 三項間演算子で無理やり1行に笑
   return 0;
 }
+
+/* ギリ読める範囲でココまで圧縮できる． コード長: 191 Byte, 実行時間: 9 ms, メモリ: 3780 KB
+#include <bits/stdc++.h>
+main(){
+  double A,B,C,D;
+  std::cin >> A >> B >> C >> D;
+  std::cout << (C*D>B?(int)ceil(A/(C*D-B)):-1);
+}
+*/
