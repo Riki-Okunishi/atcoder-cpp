@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+struct ProconInit {
+  static constexpr int IOS_PREC = 15;
+  static constexpr bool AUTOFLUSH = false;
+
+  ProconInit() {
+    cin.tie(nullptr);
+    ios::sync_with_stdio(false);
+    cout << fixed << setprecision(IOS_PREC);
+    if (AUTOFLUSH) cout << unitbuf;
+  }
+} PROCON_INIT;
+
+signed main() {
+  int N;
+  string S;
+  cin >> N >> S;
+  for(int i=0; i< N; ++i){
+    if(S.at(i)=='1'){
+      if(i%2==1){
+        cout << "Aoki";
+        return 0;
+      }else{
+        cout << "Takahashi";
+        return 0;
+      }
+    }
+  }
+  return 0;
+}
